@@ -8,3 +8,6 @@ Route::get('/', function () {
         'message' => 'Sucesso ao retornar'
     ]);
 });
+
+Route::get('evaluations/{company}', [\App\Http\Controllers\Api\EvaluationController::class, 'index']);
+Route::post('evaluations/{company}', [\App\Http\Controllers\Api\EvaluationController::class, 'store']);
